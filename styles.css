@@ -1,0 +1,143 @@
+/* Fonte e configurações globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2d3e3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    overflow: hidden; /* Impede o scroll */
+}
+
+/* Container de login */
+.login-container {
+    background-color: #354f52;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Estilização do título */
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #e0e1dd;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Grupo de formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Estilização dos labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #cdd3d5;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #cdd3d5;
+    border-radius: 4px;
+    background-color: #f1f5f8;
+    color: #333;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #45a049;
+    box-shadow: 0 0 5px rgba(69, 160, 73, 0.5);
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilo de hover no botão */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Ícones */
+label i, button i {
+    margin-right: 10px;
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+    .login-container {
+        padding: 30px;
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input, select {
+        padding: 14px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 14px;
+        font-size: 20px;
+    }
+}
+
+/* Responsividade para telas pequenas, incluindo orientação horizontal */
+@media (max-width: 600px), (orientation: landscape) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .login-container {
+        margin: 10px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    input, select {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
