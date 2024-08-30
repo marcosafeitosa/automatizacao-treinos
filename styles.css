@@ -1,143 +1,121 @@
-/* Fonte e configurações globais */
+/* Estilos gerais */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #2d3e3f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #fff;
-    overflow: hidden; /* Impede o scroll */
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Container de login */
-.login-container {
-    background-color: #354f52;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    margin: 0 20px;
-    box-sizing: border-box;
+/* Estilos do Card de Login */
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-/* Estilização do título */
-h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: #e0e1dd;
-    font-weight: 700;
-    text-transform: uppercase;
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px;
 }
 
-/* Grupo de formulário */
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
+.card-body {
+  padding: 30px;
+  background-color: #ffffff;
 }
 
-/* Estilização dos labels */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 700;
-    color: #cdd3d5;
+.input-group-text {
+  background-color: #e9ecef;
+  border: none;
+  color: #495057;
 }
 
-input, select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #cdd3d5;
-    border-radius: 4px;
-    background-color: #f1f5f8;
-    color: #333;
-    font-size: 16px;
-    box-sizing: border-box;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 10px 0;
 }
 
-input:focus, select:focus {
-    outline: none;
-    border-color: #45a049;
-    box-shadow: 0 0 5px rgba(69, 160, 73, 0.5);
+/* Estilos para o Container de Informações */
+.card.mt-4 {
+  margin-top: 20px !important; /* Adicionado para garantir espaçamento adequado */
 }
 
-/* Botão de envio */
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+.card-body {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
-/* Estilo de hover no botão */
-button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-/* Ícones */
-label i, button i {
-    margin-right: 10px;
+.list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-/* Responsividade para telas maiores */
-@media (min-width: 768px) {
-    .login-container {
-        padding: 30px;
-        max-width: 500px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    input, select {
-        padding: 14px;
-        font-size: 18px;
-    }
-
-    button {
-        padding: 14px;
-        font-size: 20px;
-    }
+.list-unstyled li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsividade para telas pequenas, incluindo orientação horizontal */
-@media (max-width: 600px), (orientation: landscape) {
-    body {
-        flex-direction: column;
-        padding: 20px;
-        height: auto;
-        justify-content: flex-start;
-    }
+.list-unstyled li:hover {
+  background-color: #e2e6ea;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
 
-    .login-container {
-        margin: 10px;
-        width: 100%;
-    }
+.list-unstyled i {
+  font-size: 1.2rem;
+}
 
-    h1 {
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
+.text-muted {
+  font-size: 0.9rem;
+  color: #6c757d !important;
+  text-align: center;
+  margin-top: 20px;
+}
 
-    button {
-        font-size: 16px;
-        padding: 10px;
-    }
+/* Efeitos de hover para botões */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
 
-    input, select {
-        padding: 10px;
-        font-size: 16px;
-    }
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para responsividade */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  .list-unstyled li {
+    font-size: 0.95rem;
+  }
 }
